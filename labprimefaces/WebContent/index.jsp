@@ -8,11 +8,11 @@
     </h:head> 
       
     <h:body> 
-       <h:form> 
+       <f:form> 
            <h:outputLabel>Seja bem vindo ao primefaces</h:outputLabel>
            <p:panel header="Keyboard Demo">   
              </p:panel>
              <p:commandButton value="Submit"/>
-       </h:form>
+       </f:form>
     </h:body> 
 </html>

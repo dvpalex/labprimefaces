@@ -11,3 +11,9 @@
   
   
   BNJSQ6M4-NWP2V8P3-75KWM2XS-N76XGFST-5SWSKVDH-XFW5Z48X-S5JFSFS7-ZP3ZZ3S3
+  
+  
+  	<dependency>
+	<groupId>javax.el</groupId>
+	<artifactId>el-api</artifactId>
+	<version>2.2</version>
