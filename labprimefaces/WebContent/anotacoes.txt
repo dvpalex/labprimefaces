@@ -1,0 +1,13 @@
+ <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+ 
+  <servlet-mapping>
+     <servlet-name>Resource Servlet</servlet-name>
+     <url-pattern>/primefaces_resource/*</url-pattern>
+   </servlet-mapping>
+  
+  
+  BNJSQ6M4-NWP2V8P3-75KWM2XS-N76XGFST-5SWSKVDH-XFW5Z48X-S5JFSFS7-ZP3ZZ3S3
