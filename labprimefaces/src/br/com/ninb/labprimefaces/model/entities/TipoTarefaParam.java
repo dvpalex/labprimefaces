@@ -61,13 +61,9 @@ public class TipoTarefaParam implements Serializable {
 		this.ativo = ativo;
 	}
 
-
-
 	public TipoTarefa getTipotarefa() {
 		return tipotarefa;
 	}
-	
-	
 
 	public void setTipotarefa(TipoTarefa tipotarefa) {
 		this.tipotarefa = tipotarefa;
@@ -147,16 +143,21 @@ public class TipoTarefaParam implements Serializable {
 
 	@Override
 	public boolean equals(Object obj) {
+		
 		if (this == obj) {
 			return true;
 		}
+		
 		if (obj == null) {
 			return false;
 		}
+		
 		if (!(obj instanceof TipoTarefaParam)) {
 			return false;
 		}
+		
 		TipoTarefaParam other = (TipoTarefaParam) obj;
+		
 		if (nome == null) {
 			if (other.nome != null) {
 				return false;
@@ -166,9 +167,5 @@ public class TipoTarefaParam implements Serializable {
 		}
 		return true;
 	}
-	
-	
-	
-	
 	
 }
