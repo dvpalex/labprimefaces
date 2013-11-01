@@ -10,7 +10,7 @@
   </welcome-file-list>
   <servlet-mapping>
     <servlet-name>Faces Servlet</servlet-name>
-    <url-pattern>*.jfs</url-pattern>
+    <url-pattern>*.jsf</url-pattern>
   </servlet-mapping>
    <!-- Configuração da servlet do primeface -->
    <servlet>
@@ -20,7 +20,7 @@
    <!-- Configuração do template ou skin do primefaces -->
    <context-param>
       <param-name>primefaces.THEME</param-name>
-   	  <param-value>redmond</param-value>
+   	  <param-value>bootstrap</param-value>
    </context-param>
     <servlet>
     <servlet-name>Faces Servlet</servlet-name>

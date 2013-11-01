@@ -5,4 +5,4 @@
  * @author alexsandro.almeida
  *
  */
-package br.com.ninb.labprimefaces.model.dao;
+package br.com.ninb.labprimefaces.dal;

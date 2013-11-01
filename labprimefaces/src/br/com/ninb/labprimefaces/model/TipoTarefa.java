@@ -1,4 +1,4 @@
-package br.com.ninb.labprimefaces.model.entities;
+package br.com.ninb.labprimefaces.model;
 
 
 import javax.persistence.Entity;

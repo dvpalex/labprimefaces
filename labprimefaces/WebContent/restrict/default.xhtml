@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="../resources/restrict/template/main.xhtml">
+	
+	
+	<ui:define name="header">
+		Home - Gestor de Operações
+	</ui:define>
+	
+	<ui:define name="content">
+		<p:panel id="panel" header="Processo" style="margin-bottom:10px;">  
+			<h:form>
+				<p:panelGrid columns="2" style=""> 
+				<p:outputLabel for="nome" value="Nome" />
+				<h:inputText id="nome" required="true" >
+					<f:validateLength minimum="5" maximum="60"/>
+				</h:inputText>
+				<p:commandButton value="Salvar"  styleClass="btn btn-sucess"  />
+				</p:panelGrid>
+			</h:form>
+		</p:panel>
+	</ui:define>
+	<ui:define name="bottom">
+		Todos os direitos reservador
+	</ui:define>
+		 
+	
+	
+</ui:composition>
+
+</html>

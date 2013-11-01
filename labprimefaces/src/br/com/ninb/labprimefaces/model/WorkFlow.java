@@ -1,4 +1,4 @@
-package br.com.ninb.labprimefaces.model.entities;
+package br.com.ninb.labprimefaces.model;
 
 import java.io.Serializable;
 import java.util.Date;

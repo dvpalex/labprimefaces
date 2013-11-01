@@ -1,15 +1,17 @@
-package br.com.ninb.labprimefaces.model.dao;
+package br.com.ninb.labprimefaces.dal;
 
 import java.util.List;
 
+import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 
-public class Dao<PK, T> implements IDao<PK , T>{
+public class GenericDal<PK, T> implements IGenericDal<PK , T>{
 
 	private EntityManager entityManager;
 	
-	public Dao(EntityManager entityManager){
+	public GenericDal(EntityManager entityManager){
 		this.entityManager = entityManager;
+		
 	}
 	
 	

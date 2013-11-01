@@ -1,8 +1,8 @@
-package br.com.ninb.labprimefaces.model.dao;
+package br.com.ninb.labprimefaces.dal;
 
 import java.util.List;
 
-public interface IDao <PK, T> {
+public interface IGenericDal <PK, T> {
 
 	T getByID(Class<T> classe, PK pk);
 	void save(T entity);
