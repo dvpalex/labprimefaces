@@ -7,8 +7,8 @@ import br.com.ninb.labprimefaces.model.Tarefa;
 
 public class TarefaDal extends GenericDal<Integer, Tarefa> {
 
-	public TarefaDal(EntityManager entityManager) {
-		super(entityManager);
+	public TarefaDal() {
+	
 
 	}
 

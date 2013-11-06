@@ -8,6 +8,11 @@
 	<lifecycle>
 		<phase-listener></phase-listener>
 	</lifecycle>
+	<managed-bean>
+        <managed-bean-name>ProcessoControl</managed-bean-name>
+        <managed-bean-class>br.com.ninb.labprimefaces.control.ProcessoControl</managed-bean-class>     
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
 
 
 </faces-config>

@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="oper_workflow")
@@ -28,6 +30,7 @@ public class WorkFlow implements Serializable {
 	private int id;
 	
 	@Column(nullable=false)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date dtaInc;
 	
 	@ManyToOne(optional=false)

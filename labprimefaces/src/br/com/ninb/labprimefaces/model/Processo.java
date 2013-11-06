@@ -3,6 +3,7 @@ package br.com.ninb.labprimefaces.model;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -10,6 +11,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 
 @Entity
@@ -27,6 +30,7 @@ public class Processo implements Serializable {
 	private String nome;
 	
 	@Column(nullable=false)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date dtaInc;
 	
 	@OneToMany(mappedBy="processo", fetch = FetchType.LAZY)
@@ -56,7 +60,7 @@ public class Processo implements Serializable {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
+	
 	public Date getDtaInc() {
 		return dtaInc;
 	}
