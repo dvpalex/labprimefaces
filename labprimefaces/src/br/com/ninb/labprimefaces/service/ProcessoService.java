@@ -3,25 +3,27 @@ package br.com.ninb.labprimefaces.service;
  
 
 import br.com.ninb.labprimefaces.dal.ProcessoDal;
+import br.com.ninb.labprimefaces.model.Processo;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-@Stateless
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+@Service
+@Transactional
 public class ProcessoService {
 	
-	@PersistenceContext
-	private EntityManager em;
+	@Autowired
+	private ProcessoDal dal;
 	
-	
-	protected EntityManager getEntityManager(){
-		return em;
-	}
 
-	
-	public ProcessoService(ProcessoDal dal){
-		dal.setEntityManager(getEntityManager());
+	public void adicionar(Processo obj) throws IllegalArgumentException{
+		
+		dal.save(obj);
 	}
 	
 	

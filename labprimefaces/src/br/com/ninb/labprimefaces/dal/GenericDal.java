@@ -4,10 +4,16 @@ package br.com.ninb.labprimefaces.dal;
 import java.util.List;
 
 
+
+
+import javassist.expr.Instanceof;
+
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 public class GenericDal<PK, T> {
 
+	@PersistenceContext
 	private EntityManager entityManager;
 	
 	public GenericDal(){
@@ -58,7 +64,7 @@ public class GenericDal<PK, T> {
 	public List<T> listAll() {
 		
 		T classe =null;
-		return entityManager.createQuery("FROM " + classe.getClass().getName()).getResultList();
+		return entityManager.createQuery("FROM ").getResultList();
 	}
 	
 }
