@@ -13,6 +13,4 @@
         <managed-bean-class>br.com.ninb.labprimefaces.control.ProcessoControl</managed-bean-class>     
         <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
-
-
 </faces-config>
