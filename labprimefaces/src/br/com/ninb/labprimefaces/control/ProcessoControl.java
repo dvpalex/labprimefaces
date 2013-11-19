@@ -3,18 +3,24 @@ package br.com.ninb.labprimefaces.control;
 import java.util.List;
 
 import javax.annotation.ManagedBean;
+import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.faces.bean.ViewScoped;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
 
 import br.com.ninb.labprimefaces.model.Processo;
 import br.com.ninb.labprimefaces.service.ProcessoService;
 
 
-@ManagedBean
-@ViewScoped
+@Controller
+@Scope("request")
 public class ProcessoControl {
 
-	@EJB
+	
+	@Autowired
 	private ProcessoService service;
 	
 	
@@ -23,10 +29,10 @@ public class ProcessoControl {
 	private Processo processo;
 
 
-	public ProcessoControl(){
-		
-	}
-	
+	@PostConstruct
+    private void init() {
+		processo = new Processo();
+	}	
 	
 	public ProcessoService getService() {
 		return service;
@@ -62,6 +68,9 @@ public class ProcessoControl {
 
 	
 	public void inserirProcesso(){
+		
+		Processo oProcesso = new Processo();
+		oProcesso.setNome("Teste");
 		
 		System.out.print("Incluido");
 	}
